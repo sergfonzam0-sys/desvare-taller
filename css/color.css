@@ -1,0 +1,219 @@
+/* ==========================================================================
+CONFIGURACIÓN Y VARIABLES
+========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+:root {
+--bg-dark: #070913;
+--card-bg: rgba(13, 22, 40, 0.75);
+--cyan-neon: #00f3ff;
+--blue-glow: #0066ff;
+--purple-glow: #7000ff;
+--text-main: #e2e8f0;
+--text-muted: #94a3b8;
+--border-tech: rgba(0, 243, 255, 0.2);
+--font-heading: 'Orbitron', sans-serif;
+--font-body: 'Rajdhani', sans-serif;
+}
+
+/* ==========================================================================
+RESET Y ESTILOS GENERALES
+========================================================================== */
+
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+background-color: var(--bg-dark);
+/* Fondo Tecnológico Futurist/Cyberpunk */
+background-image:
+radial-gradient(circle at 15% 15%, rgba(0, 243, 255, 0.12) 0%, transparent 35%),
+radial-gradient(circle at 85% 85%, rgba(112, 0, 255, 0.12) 0%, transparent 35%),
+linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px),
+linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
+background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px;
+background-attachment: fixed;
+color: var(--text-main);
+font-family: var(--font-body);
+font-size: 18px;
+line-height: 1.6;
+min-height: 100vh;
+padding: 20px;
+}
+
+/* ==========================================================================
+TIPOGRAFÍA Y FUENTES
+========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+font-family: var(--font-heading);
+color: #ffffff;
+text-transform: uppercase;
+letter-spacing: 2px;
+margin-bottom: 1rem;
+}
+
+h1 {
+font-size: 2.5rem;
+color: var(--cyan-neon);
+text-shadow: 0 0 10px rgba(0, 243, 255, 0.5),
+0 0 20px rgba(0, 243, 255, 0.3);
+text-align: center;
+}
+
+h2 {
+font-size: 1.8rem;
+border-bottom: 2px solid var(--cyan-neon);
+display: inline-block;
+padding-bottom: 5px;
+}
+
+p {
+font-size: 1.1rem;
+color: var(--text-main);
+margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+CONTENEDORES Y TARJETAS TECNOLÓGICAS
+========================================================================== */
+.container {
+max-width: 1100px;
+margin: 0 auto;
+padding: 20px;
+}
+
+.tech-card, form, main {
+background: var(--card-bg);
+border: 1px solid var(--border-tech);
+border-radius: 12px;
+padding: 30px;
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5),
+inset 0 0 15px rgba(0, 243, 255, 0.05);
+margin-bottom: 25px;
+position: relative;
+overflow: hidden;
+}
+
+/* Detalles decorativos en esquinas para efecto Sci-Fi */
+.tech-card::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 10px;
+height: 10px;
+border-top: 2px solid var(--cyan-neon);
+border-left: 2px solid var(--cyan-neon);
+}
+
+.tech-card::after {
+content: '';
+position: absolute;
+bottom: 0;
+right: 0;
+width: 10px;
+height: 10px;
+border-bottom: 2px solid var(--cyan-neon);
+border-right: 2px solid var(--cyan-neon);
+}
+
+/* ==========================================================================
+FORMULARIOS Y ENTRADAS DE DATOS (Para contacto.html)
+========================================================================== */
+label {
+font-family: var(--font-heading);
+font-size: 0.9rem;
+color: var(--cyan-neon);
+letter-spacing: 1px;
+display: block;
+margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+width: 100%;
+background: rgba(5, 10, 20, 0.8);
+border: 1px solid var(--border-tech);
+border-radius: 6px;
+padding: 12px 15px;
+color: #ffffff;
+font-family: var(--font-body);
+font-size: 1.1rem;
+margin-bottom: 20px;
+transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+outline: none;
+border-color: var(--cyan-neon);
+box-shadow: 0 0 12px rgba(0, 243, 255, 0.4);
+background: rgba(10, 20, 35, 0.9);
+}
+
+/* ==========================================================================
+BOTONES
+========================================================================== */
+button,
+.btn,
+input[type="submit"] {
+font-family: var(--font-heading);
+font-size: 1rem;
+font-weight: 600;
+color: var(--bg-dark);
+background: var(--cyan-neon);
+border: none;
+border-radius: 4px;
+padding: 12px 30px;
+cursor: pointer;
+text-transform: uppercase;
+letter-spacing: 2px;
+transition: all 0.3s ease;
+box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+display: inline-block;
+}
+
+button:hover,
+.btn:hover,
+input[type="submit"]:hover {
+background: #ffffff;
+color: var(--bg-dark);
+box-shadow: 0 0 25px rgba(0, 243, 255, 0.8);
+transform: translateY(-2px);
+}
+
+/* ==========================================================================
+ENLACES E IMÁGENES
+========================================================================== */
+a {
+color: var(--cyan-neon);
+text-decoration: none;
+transition: color 0.3s ease;
+}
+
+a:hover {
+color: #ffffff;
+text-shadow: 0 0 8px var(--cyan-neon);
+}
+
+img {
+max-width: 100%;
+height: auto;
+border-radius: 8px;
+border: 1px solid var(--border-tech);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+transform: scale(1.02);
+box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+}
